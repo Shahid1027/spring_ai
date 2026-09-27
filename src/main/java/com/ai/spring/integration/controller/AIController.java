@@ -4,7 +4,7 @@ import com.ai.spring.integration.service.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/ai")
+@RequestMapping("/api")
 public class AIController {
 
     private final AIService aiService;
@@ -13,8 +13,8 @@ public class AIController {
         this.aiService = aiService;
     }
 
-    @PostMapping("/ask")
-    public String ask(@RequestBody String prompt) {
-        return aiService.ask(prompt);
+    @PostMapping("/summarize")
+    public String summarize(@RequestBody String prompt) {
+        return aiService.summarize(prompt);
     }
 }
