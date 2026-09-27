@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
+                git branch: 'master',
                     credentialsId: 'Shahid1027',
                     url: 'https://github.com/Shahid1027/spring_ai.git'
             }
